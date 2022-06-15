@@ -5,18 +5,36 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Article implements Comparable<Article> {
+    private final Long id;
     private final Title title;
     private final Body body;
     private final LocalDateTime createdAt;
 
-    public Article(String title, String body, LocalDateTime createdAt) {
+    public Article(Long id, String title, String body, LocalDateTime createdAt) {
+        this.id = id;
         this.title = new Title(title);
         this.body = new Body(body);
         this.createdAt = createdAt;
     }
 
+    public Article(String title, String body, LocalDateTime createdAt) {
+        this(null, title, body, createdAt);
+    }
+
     public Article(String title, String body) {
-        this(title, body, LocalDateTime.now());
+        this(null, title, body, LocalDateTime.now());
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Title getTitle() {
+        return title;
+    }
+
+    public Body getBody() {
+        return body;
     }
 
     public LocalDateTime getCreatedAt() {
