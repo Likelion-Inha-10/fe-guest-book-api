@@ -5,10 +5,13 @@ import java.util.Objects;
 import likelion.guestbook.domain.Article;
 
 public class ArticleResponseDto {
-    private final long id;
-    private final String title;
-    private final String body;
-    private final LocalDateTime createdAt;
+    private long id;
+    private String title;
+    private String body;
+    private LocalDateTime createdAt;
+
+    public ArticleResponseDto() {
+    }
 
     public ArticleResponseDto(long id, String title, String body, LocalDateTime createdAt) {
         this.id = id;
