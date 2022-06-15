@@ -7,10 +7,14 @@ public class Article {
     private final Body body;
     private final LocalDateTime createdAt;
 
-    public Article(String title, String body) {
+    public Article(String title, String body, LocalDateTime createdAt) {
         this.title = new Title(title);
         this.body = new Body(body);
-        this.createdAt = LocalDateTime.now();
+        this.createdAt = createdAt;
+    }
+
+    public Article(String title, String body) {
+        this(title, body, LocalDateTime.now());
     }
 
     public LocalDateTime getCreatedAt() {

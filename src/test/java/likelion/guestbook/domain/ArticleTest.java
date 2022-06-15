@@ -22,6 +22,21 @@ class ArticleTest {
         assertThat(actual).isNotNull();
     }
 
+    @DisplayName("제목과 본문을 String 형태로, 생성일자를 LocalDateTime 형태로 받아 Article 객체를 생성한다.")
+    @Test
+    void constructor_withCreatedAt() {
+        // given
+        String title = "Title";
+        String body = "Body";
+        LocalDateTime createdAt = LocalDateTime.now();
+
+        // when
+        Article actual = new Article(title, body, createdAt);
+
+        // then
+        assertThat(actual.getCreatedAt()).isEqualTo(createdAt);
+    }
+
     @DisplayName("Article이 생성된 시점을 가져올 수 있다.")
     @Test
     void getCreatedAt() {
