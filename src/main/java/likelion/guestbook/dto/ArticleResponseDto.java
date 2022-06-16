@@ -1,13 +1,18 @@
 package likelion.guestbook.dto;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.time.LocalDateTime;
 import java.util.Objects;
 import likelion.guestbook.domain.Article;
 
 public class ArticleResponseDto {
+    @ApiModelProperty(name = "방명록 게시글 ID", example = "3")
     private long id;
+    @ApiModelProperty(name = "방명록 게시글 제목", example = "안녕하세요.")
     private String title;
+    @ApiModelProperty(name = "방명록 게시글 본문", example = "굉장히 오랜만이네요. 그간 잘 지내셨나요?")
     private String body;
+    @ApiModelProperty(name = "방명록 게시글 본문")
     private LocalDateTime createdAt;
 
     public ArticleResponseDto() {
