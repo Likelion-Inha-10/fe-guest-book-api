@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(value = "방명록", tags = "이미지와 이미지의 댓글을 관리합니다.")
+@Api(value = "방명록", tags = "방명록 관련 API")
 @RestController
 public class ArticleController {
     private final ArticleService articleService;
