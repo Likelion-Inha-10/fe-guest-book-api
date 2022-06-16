@@ -8,5 +8,5 @@
 
 ## URL
 
-- **API HOST**: https://likelion-guest-book.devhudi.xyz
-- **API DOCS**: https://likelion-guest-book.devhudi.xyz/swagger-ui/index.html
+- **API HOST**: https://guestbook.devhudi.xyz
+- **API DOCS**: https://guestbook.devhudi.xyz/swagger-ui/index.html
