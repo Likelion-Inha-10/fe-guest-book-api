@@ -23,8 +23,9 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'mysql:mysql-connector-java'
-    implementation "io.springfox:springfox-swagger-ui:3.0.0"
     testImplementation 'io.rest-assured:rest-assured:4.4.0'
+    implementation "io.springfox:springfox-boot-starter:3.0.0"
+    implementation "io.springfox:springfox-swagger-ui:3.0.0"
 }
 
 tasks.named('test') {
